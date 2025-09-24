@@ -42,7 +42,7 @@ information_schema
 ### Step 4 - Clone the database offline
 
 ```sql
-pgcopydb clone --skip-extensions --drop-if-exists --skip-ext-comments --no-owner --no-acl --filters /var/lib/postgresql/filter_schema.ini
+pgcopydb clone --skip-extensions --table-jobs 8 --index-jobs 8 --restore-jobs 8 --drop-if-exists --skip-ext-comments --no-owner --no-acl --filters --filters /var/lib/postgresql/filter_schema.ini
 ```
 
 ### Step 5 - Clean up
@@ -66,4 +66,5 @@ pgcopydb compare data
 Note that if you are using a filter file, **pgcopydb compare data** will fail with a message similar to this:
 16:02:56.949 16981 INFO   Current filtering setup is: {"type":"SOURCE_FILTER_TYPE_NONE"}
 16:02:56.949 16981 INFO   Catalog filtering setup is: {"type":"SOURCE_FILTER_TYPE_EXCL","exclude-schema":...}
+
 
