@@ -1,7 +1,7 @@
 # **Copying a database offline using pgcopydb**
 
 This guide outlines the steps to copy a database from any PostgreSQL to any PostgreSQL offline.
-I am focusing on Azure Database for PostgreSQL in this script, as you can see from the permissions
+I am focusing on Azure Database for PostgreSQL in this script, as you can see from Step 0
 
 use case(s): create lower (test/dev) environments; migrate a database within a window
 
@@ -60,5 +60,6 @@ When using a filter file,
 ```sql
 pgcopydb compare schema
 pgcopydb compare data
+
 
 ```
