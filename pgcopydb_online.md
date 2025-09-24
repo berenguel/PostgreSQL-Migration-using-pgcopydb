@@ -53,7 +53,7 @@ vi /var/lib/postgresql/filter_schema.ini
 pg_catalog
 information_schema
 
-
+```
 
 ### Step 4 - Clone the database online
 
@@ -84,5 +84,6 @@ When using a filter file,
 ```sql
 pgcopydb compare schema
 pgcopydb compare data
+
 
 ```
