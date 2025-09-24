@@ -64,8 +64,11 @@ pgcopydb compare data
 ```
 
 Note that if you are using a filter file, **pgcopydb compare data** will fail with a message similar to this:
+```
 16:02:56.949 16981 INFO   Current filtering setup is: {"type":"SOURCE_FILTER_TYPE_NONE"}
 16:02:56.949 16981 INFO   Catalog filtering setup is: {"type":"SOURCE_FILTER_TYPE_EXCL","exclude-schema":...}
+```
+
 
 
 
